@@ -1,4 +1,4 @@
-INSERT INTO Student (name, birthday, group_num) VALUES ('John', NULL, 1),
+INSERT INTO Student (name, birthday, groupnumber) VALUES ('John', NULL, 1),
        ('Chris', NULL, 1),
        ('Carl', NULL, 1),
        ('Oliver', NULL, 2),
