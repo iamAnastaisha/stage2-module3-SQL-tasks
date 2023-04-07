@@ -19,8 +19,8 @@ CREATE TABLE mark
     student_id BIGINT,
     subject_id BIGINT,
     mark INT,
-    foreign key (student_id) references student(id) NOT NULL,
-    foreign key (subject_id) references subject(id) NOT NULL
+    foreign key (student_id) references student(id),
+    foreign key (subject_id) references subject(id)
 );
 
 CREATE TABLE paymenttype

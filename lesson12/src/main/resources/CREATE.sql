@@ -20,7 +20,7 @@ CREATE TABLE mark
     student_id BIGINT,
     subject_id BIGINT,
     mark INT NOT NULL,
-    CONSTRAINT mark_student_id_fkey foreign key (student_id) references student(id),
+    CONSTRAINT mark_student_id_fkey foreign key (student_id) references student(id) ON DELETE CASCADE,
     CONSTRAINT mark_subject_id_fkey foreign key (subject_id) references subject(id)
 );
 
@@ -37,7 +37,7 @@ CREATE TABLE payment
     amount decimal NOT NULL,
     payment_date TIMESTAMP  NOT NULL,
     student_id BIGINT NOT NULL,
-    CONSTRAINT payment_type_id_fkey foreign key (type_id) references paymenttype(id),
-    constraint payment_student_id_fkey foreign key (student_id) references student(id)
+    CONSTRAINT payment_type_id_fkey foreign key (type_id) references paymenttype(id) ON DELETE CASCADE,
+    constraint payment_student_id_fkey foreign key (student_id) references student(id) ON DELETE CASCADE
 );
 
